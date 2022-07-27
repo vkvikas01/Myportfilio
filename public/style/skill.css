@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+/* navbar styling */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0px;
+    font-family: 'ubuntu';
+    transition: all 0.3s ease;
+    background: blue;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: crimson;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+    color: crimson;
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+.navbar .menu li{
+list-style: none;
+display: inline-block;
+
+}
+.navbar .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: crimson;
+}
+.navbar.sticky .menu li a:hover{
+color: #fff;
+}
+.menu-btn{
+    color: rgb(221, 29, 29);
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+.skills .skills-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 200px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+section{
+    padding: 100px 0;
+}
+
+
+
+
+
+
+.skills .title:after{
+  content: "What I know";
+}
+.skills .skills-content .column{
+  width: calc(50% - 30px);
+}
+.skills .skills-content .left p{
+  text-align: justify;
+
+}
+.skills .skills-content .left a{
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding:8px 16px ;
+  margin: 20px 0;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;   
+}
+.skills .skills-content .left a:hover{
+  color: crimson;
+  background: none;
+}
+.skills .skills-content .left .text{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.skills .skills-content .right .bars{
+  margin-bottom:25px;
+}
+.skills .skills-content .right .info{
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  justify-content: space-between;
+}
+.skills .skills-content .right span{
+  font-weight: 500;
+  font-size: 18px;
+  font-family: serif;
+}
+.skills .skills-content .right .line{
+  height: 5px;
+  width: 100%;
+  background: lightgray;
+  position: relative;
+}
+.skills .skills-content .right .line::before{
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: crimson;
+}
+.skills-content .right .html::before{
+  width: 90%;
+}
+.skills-content .right .css::before{
+  width: 60%;
+}
+.skills-content .right .js::before{
+  width: 80%;
+}
+.skills-content .right .php::before{
+  width: 50%;
+}
+.skills-content .right .mysql::before{
+  width: 70%;
+}
+/* certificate styling */
+.certificate .certificate-content{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.certificate .title:after{
+  content: "What I Achieved";
+}
+/* .certificate .certificate-content{
+  border: 2px solid red;
+  display: flex;
+} */
+.certificate .certificate-content .column{
+  width: calc(50% - 30px);
+}
+.certificate .certificate-content .left p{
+  text-align: justify;
+
+}
+.certImg{
+  width: 80%;
+  height: 80%;
+  margin: 10px;
+}
+.certificate .certificate-content .left .text{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+/* footer styling */
+    footer{
+      background: #111;
+      padding: 20px 23px;
+      color: #fff;
+      text-align: center;
+  }
+  footer span a{
+      color: crimson;
+  }
+  footer span a:hover{
+      text-decoration: underline;
+  }
+  @media ( max-width:1300px){
+      .home .max-width{
+          margin-left: 0px;
+      }
+      }
+      @media ( max-width:991px){
+          .max-width{
+              padding: 0 50px;
+          }
+      }
+      @media ( max-width:947px){
+          .menu-btn{
+              display: block;
+              z-index: 999;
+          }
+          .menu-btn i.active::before{
+              content: "\f00d";
+          }
+          .navbar .menu{
+              position: fixed;
+              height: 100vh;
+              width: 100%;
+              left: -100%;
+              top: 0;
+              background: #111;
+              text-align: center;
+              padding-top: 80px;
+              transition: all 0.3s ease;
+          }
+          .navbar .menu.active{
+              left: 0;
+          }
+          .navbar .menu li{
+              display: block;
+          }
+          .navbar .menu li a{
+              display: inline-block;
+              margin: 20px;
+              font-size: 25px;
+          }
+           .skills .skills-content .column{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+           .certificate .certificate-content .column{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        
+         
+      }
+  

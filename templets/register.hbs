@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="../style/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+</head>
+<body>
+<nav class="navbar">
+    <div class="max-width">
+        <div class="logo"><a href="#">Portfo<span>lio.</span></a></div>
+        <ul class="menu">
+            <li><a href="/" class="menu-btn">Home</a></li>
+            <li><a href="/" class="menu-btn">About</a></li>
+            <li><a href="/" class="menu-btn">Services</a></li>
+            <li><a href="/" class="menu-btn">Skills</a></li>
+         
+            <li><a href="/contact" class="menu-btn">Contact</a></li>
+               <li><a href="/login" class="menu-btn">Login</a></li>
+        </ul>
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="/register" method="POST">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">First Name</span>
+            <input type="text" placeholder="Enter your first name" name="firstname">
+          </div>
+          <div class="input-box">
+            <span class="details">Last name</span>
+            <input type="text" placeholder="Enter your last name" name="lastname">
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" placeholder="Enter your email" name="email">
+          </div>
+          <div class="input-box">
+            <span class="details">Gender</span>
+            <input type="text" placeholder="Enter your gender" name="gender" >
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" placeholder="Enter your password" name="password">
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" placeholder="Confirm your password" name="confirmpassword">
+          </div>
+        </div>
+        {{!-- <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+          <input type="radio" name="gender" id="dot-3">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Prefer not to say</span>
+            </label>
+          </div> --}}
+        </div>
+        <div class="button">
+          <input class="btn" type="submit" value="Register">
+        </div>
+      </form>
+      <div class="signup-link">Already Have Acoount <a href="/register">SignIn now</a></div>
+    </div>
+  </div>
+
+<footer>
+    <span>Created by <a href="#"> vikas</a>|<span class="far fa-copyright"></span> 2021 All rights reserved.</span>
+</footer> 
+    <script src="../js/script.js"></script>
+</body>
+</html>
